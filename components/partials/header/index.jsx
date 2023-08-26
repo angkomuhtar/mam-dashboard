@@ -64,22 +64,20 @@ const Header = ({ className = "custom-class" }) => {
                  ? "py-1"
                  : "md:py-6 py-3"
              }
-        `}
-      >
-        <div className="flex justify-between items-center h-full">
+        `}>
+        <div className='flex justify-between items-center h-full'>
           {/* For Vertical  */}
 
           {menuType === "vertical" && (
-            <div className="flex items-center md:space-x-4 space-x-2 rtl:space-x-reverse">
+            <div className='flex items-center md:space-x-4 space-x-2 rtl:space-x-reverse'>
               {collapsed && width >= breakpoints.xl && (
                 <button
-                  className="text-xl text-slate-900 dark:text-white"
-                  onClick={() => setMenuCollapsed(!collapsed)}
-                >
+                  className='text-xl text-slate-900 dark:text-white'
+                  onClick={() => setMenuCollapsed(!collapsed)}>
                   {isRtl ? (
-                    <Icon icon="akar-icons:arrow-left" />
+                    <Icon icon='akar-icons:arrow-left' />
                   ) : (
-                    <Icon icon="akar-icons:arrow-right" />
+                    <Icon icon='akar-icons:arrow-right' />
                   )}
                 </button>
               )}
@@ -87,10 +85,9 @@ const Header = ({ className = "custom-class" }) => {
               {/* open mobile menu handlaer*/}
               {width < breakpoints.xl && width >= breakpoints.md && (
                 <div
-                  className="cursor-pointer text-slate-900 dark:text-white text-2xl"
-                  onClick={handleOpenMobileMenu}
-                >
-                  <Icon icon="heroicons-outline:menu-alt-3" />
+                  className='cursor-pointer text-slate-900 dark:text-white text-2xl'
+                  onClick={handleOpenMobileMenu}>
+                  <Icon icon='heroicons-outline:menu-alt-3' />
                 </div>
               )}
               <SearchModal />
@@ -98,15 +95,14 @@ const Header = ({ className = "custom-class" }) => {
           )}
           {/* For Horizontal  */}
           {menuType === "horizontal" && (
-            <div className="flex items-center space-x-4 rtl:space-x-reverse">
+            <div className='flex items-center space-x-4 rtl:space-x-reverse'>
               <Logo />
               {/* open mobile menu handlaer*/}
               {width <= breakpoints.xl && (
                 <div
-                  className="cursor-pointer text-slate-900 dark:text-white text-2xl"
-                  onClick={handleOpenMobileMenu}
-                >
-                  <Icon icon="heroicons-outline:menu-alt-3" />
+                  className='cursor-pointer text-slate-900 dark:text-white text-2xl'
+                  onClick={handleOpenMobileMenu}>
+                  <Icon icon='heroicons-outline:menu-alt-3' />
                 </div>
               )}
             </div>
@@ -116,19 +112,18 @@ const Header = ({ className = "custom-class" }) => {
             <HorizentalMenu />
           ) : null}
           {/* Nav Tools  */}
-          <div className="nav-tools flex items-center lg:space-x-6 space-x-3 rtl:space-x-reverse">
-            <Language />
+          <div className='nav-tools flex items-center lg:space-x-6 space-x-3 rtl:space-x-reverse'>
+            {/* <Language /> */}
             <SwitchDark />
-            <MonoChrome />
+            {/* <MonoChrome /> */}
             {width >= breakpoints.md && <Message />}
             {width >= breakpoints.md && <Notification />}
             {width >= breakpoints.md && <Profile />}
             {width <= breakpoints.md && (
               <div
-                className="cursor-pointer text-slate-900 dark:text-white text-2xl"
-                onClick={handleOpenMobileMenu}
-              >
-                <Icon icon="heroicons-outline:menu-alt-3" />
+                className='cursor-pointer text-slate-900 dark:text-white text-2xl'
+                onClick={handleOpenMobileMenu}>
+                <Icon icon='heroicons-outline:menu-alt-3' />
               </div>
             )}
           </div>

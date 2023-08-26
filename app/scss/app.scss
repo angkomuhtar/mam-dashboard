@@ -1,8 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import "swiper/scss";
 @import "swiper/css/effect-creative";
+@import "aos/dist/aos.css";
 
 @layer base {
   body {
@@ -91,19 +93,12 @@
       );
     }
 
-    .footer-app-title {
-      @apply uppercase text-xs text-appSecondary-900 font-semibold;
+    .nav-link {
+      @apply group-hover:text-red-700 ml-0.5 mr-2 capitalize font-poppins text-sm;
     }
-    .footer-app-content {
-      @apply font-open_sans text-white;
+    .nav-line {
+      @apply h-0.5 bg-red-600 group-hover:w-3/5 transition-all duration-200 ease-in-out;
     }
-
-    // .recharts-cartesian-grid line,
-    // .recharts-polar-grid-angle line,
-    // .recharts-yAxis line,
-    // .recharts-xAxis line {
-    //   @apply stroke-black-200 dark:stroke-slate-700;
-    // }
   }
 }
 @layer components {

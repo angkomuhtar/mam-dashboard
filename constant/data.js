@@ -3,41 +3,11 @@ export const menuItems = [
     isHeadr: true,
     title: "menu",
   },
-
   {
     title: "Dashboard",
     icon: "heroicons-outline:home",
-    isOpen: true,
-    isHide: true,
-    child: [
-      {
-        childtitle: "Analytics Dashboard",
-        childlink: "analytics",
-      },
-      {
-        childtitle: "Ecommerce Dashboard",
-        childlink: "ecommerce",
-      },
-      {
-        childtitle: "Project  Dashbaord",
-        childlink: "project",
-      },
-      {
-        childtitle: " CRM Dashbaord",
-        childlink: "crm",
-      },
-      {
-        childtitle: "Banking Dashboard",
-        childlink: "banking",
-      },
-    ],
-  },
-  {
-    title: "changelog",
-    icon: "heroicons:arrow-trending-up",
-    link: "changelog",
+    link: "dashboard",
     isHide: false,
-    badge: "1.0.0",
   },
   {
     isHeadr: true,
